@@ -1,0 +1,15 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /order
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/order-service?authSource=admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # tạo bảng tự động (update, create, validate, none)
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

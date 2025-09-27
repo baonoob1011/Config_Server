@@ -1,0 +1,28 @@
+test:
+  message: "Hello from Config Server - COMMON"
+
+logging:
+  level:
+    root: INFO
+ipd:
+  url: http://localhost:8180
+  client_id: baonoob_app
+  client_secret: "mjeiUzqstQQC9My31Vv06emyJHoed9BT"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/baonoob
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
