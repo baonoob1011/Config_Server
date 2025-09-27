@@ -9,7 +9,12 @@ spring:
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
-
+  data:
+    elasticsearch:
+      client:
+        endpoints: localhost:9200
+      username: elastic
+      password: changeme
   jpa:
     hibernate:
       ddl-auto: update   # tạo bảng tự động (update, create, validate, none)
