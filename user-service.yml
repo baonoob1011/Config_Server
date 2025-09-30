@@ -7,3 +7,4 @@ grpc:
     profile-service:
       address: static://localhost:9090  # Phải đúng cổng gRPC server
       enable-keepalive: true
+      negotiation-type: plaintext
