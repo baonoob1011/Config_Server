@@ -9,3 +9,6 @@ spring:
     authentication:
       username: neo4j
       password: baonoob1011
+grpc:
+  server:
+    port: 9090

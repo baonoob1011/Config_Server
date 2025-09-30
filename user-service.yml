@@ -2,3 +2,8 @@ server:
   port: 8080
   servlet:
     context-path: /identity
+grpc:
+  client:
+    profile-service:
+      address: static://localhost:9090  # Phải đúng cổng gRPC server
+      enable-keepalive: true
